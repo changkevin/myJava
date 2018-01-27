@@ -1,4 +1,4 @@
-package com.zhang.myjava.multithread;
+package com.zhang.myjava.concurrent;
 
 import java.util.ArrayList;
 import java.util.List;
