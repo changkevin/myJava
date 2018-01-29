@@ -1,4 +1,4 @@
-package com.zhang.myjava.multithread;
+package com.zhang.myjava.concurrent;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
