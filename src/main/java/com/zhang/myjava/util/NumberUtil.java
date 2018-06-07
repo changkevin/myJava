@@ -10,7 +10,7 @@ public class NumberUtil {
 	 * @param num
 	 * @return
 	 */
-	public static double formatDouble(double num) {
+	public static Double formatDouble(double num) {
         // 旧方法，已经不再推荐使用
 //      BigDecimal bg = new BigDecimal(d).setScale(2, BigDecimal.ROUND_HALF_UP);  
     	
@@ -19,7 +19,7 @@ public class NumberUtil {
         return bg.doubleValue();
     }
 	
-	public static double formatDouble(double num, int precision) {
+	public static Double formatDouble(double num, int precision) {
         // 旧方法，已经不再推荐使用
 //      BigDecimal bg = new BigDecimal(d).setScale(2, BigDecimal.ROUND_HALF_UP);  
     	
@@ -31,11 +31,16 @@ public class NumberUtil {
 	public static void main(String[] args) {
 		Double a = 3.1415926;
 		Double b = 1.0000000000000002;
+		Double c = 0.0;
 		
 		System.out.println(formatDouble(a));
 		System.out.println(formatDouble(b));
 		
 		System.out.println(formatDouble(a, 0));
 		System.out.println(formatDouble(b, 0));
+		System.out.println(c);
+		if(c !=0.0 ) {
+			System.out.println("c!=0");
+		}
 	}
 }
