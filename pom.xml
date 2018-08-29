@@ -41,12 +41,42 @@
 	  <artifactId>amqp-client</artifactId>
 	  <version>3.6.6</version>
 	</dependency>
+	<dependency>
+		<groupId>org.apache.zookeeper</groupId>
+		<artifactId>zookeeper</artifactId>
+		<version>3.4.8</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.kafka</groupId>
+	    <artifactId>kafka_2.11</artifactId>
+	    <version>1.1.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.kafka</groupId>
+	    <artifactId>kafka-clients</artifactId>
+	    <version>1.1.0</version>
+	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+	    <groupId>org.apache.curator</groupId>
+	    <artifactId>curator-framework</artifactId>
+	    <version>2.12.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.curator</groupId>
+	    <artifactId>curator-recipes</artifactId>
+	    <version>2.12.0</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.curator</groupId>
+	  <artifactId>curator-client</artifactId>
+	  <version>2.12.0</version>
+	</dependency>
   </dependencies>
   
   <build>
@@ -79,6 +109,7 @@
                 </execution>
             </executions>
         </plugin>
+        <!--  
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
@@ -92,6 +123,29 @@
                 </archive>
             </configuration>
         </plugin>
+        -->
+        <plugin>
+           <artifactId>maven-assembly-plugin</artifactId>
+           <configuration>
+               <descriptorRefs>
+                   <descriptorRef>jar-with-dependencies</descriptorRef>
+               </descriptorRefs>
+               <archive>
+                   <manifest>
+                       <mainClass>com.zhang.myjava.curator.SharedReentrantLockTest</mainClass>
+                   </manifest>
+               </archive>
+           </configuration>
+           <executions>
+               <execution>
+                   <id>make-assembly</id>
+                   <phase>package</phase>
+                   <goals>
+                       <goal>attached</goal>
+                   </goals>
+               </execution>
+           </executions>
+       </plugin>
     </plugins>
   </build>
 </project>
