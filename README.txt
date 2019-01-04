@@ -16,7 +16,7 @@ java -Djava.ext.dirs=/zhangchuankai/project/myjava/target/lib com.zhang.myjava.r
 cd /zhangchuankai/project/myjava/target/classes/
 java -Djava.ext.dirs=/zhangchuankai/project/myjava/target/lib com.zhang.myjava.rabbitmq.NewTask
 
-
+=====================================================================================
 2.zookeeper测试
 （1）zkServer start
 （2）cd /zhangchuankai/project/myjava
@@ -41,3 +41,8 @@ java -cp myjava-0.0.1-SNAPSHOT-jar-with-dependencies.jar com.zhang.myjava.zookee
 java -jar myjava-0.0.1-SNAPSHOT-jar-with-dependencies.jar work1
 java -jar myjava-0.0.1-SNAPSHOT-jar-with-dependencies.jar work2
 java -jar myjava-0.0.1-SNAPSHOT-jar-with-dependencies.jar work3
+
+=====================================================================================
+3.redis测试
+（1）redis-server /usr/local/etc/redis.conf
+（2）redis-cli

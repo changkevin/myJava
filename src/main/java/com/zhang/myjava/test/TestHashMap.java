@@ -2,6 +2,7 @@ package com.zhang.myjava.test;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 class Person{
@@ -40,6 +41,9 @@ public class TestHashMap {
 	public static void test1() {
 		System.out.println("use person as key");
 		HashMap<Person, String> hm = new HashMap<Person, String>();
+		Map<Person, String> hm2 = new LinkedHashMap<Person, String>();
+		Integer in = 1;
+
 		Person p1 = new Person("1", "name1");
 		Person p2 = new Person("1", "name1");
 		hm.put(p1, "address1");

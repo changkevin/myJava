@@ -7,7 +7,7 @@ import java.util.List;
 //List<Circle>并不是List<Shape>的子类型
 public class Canvas {
 	public void drawAll(List<? extends Shape> shapes) {
-		shapes.forEach(s->s.draw(this));
+		//shapes.forEach(s->s.draw(this));
 		//shapes.add(0, new Circle()); //wrong
 	}
 	

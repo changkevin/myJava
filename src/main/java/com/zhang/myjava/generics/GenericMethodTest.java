@@ -15,9 +15,9 @@ public class GenericMethodTest {
 		Collection<String> sc = new ArrayList<>();
 		Collection<Object> oc = new ArrayList<>();
 		fromArrayToCollection(sa, sc);
-		sc.forEach(s->System.out.println(s));
+		//sc.forEach(s->System.out.println(s));
 		
 		fromArrayToCollection(sa, oc);
-		oc.forEach(s->System.out.println(s));
+		//oc.forEach(s->System.out.println(s));
 	}
 }
